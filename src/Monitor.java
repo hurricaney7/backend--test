@@ -20,6 +20,7 @@ public class Monitor extends TimerTask {
             }
         });
         System.out.println(" ");
+        System.out.println("You can add more records below (e.g HKD 300): ");
     }
 
     @Override

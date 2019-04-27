@@ -28,7 +28,7 @@ public class Recorder implements Runnable {
     * Add an monitor as the observer
     * */
     private void addMonitor(ScheduledExecutorService executorService) {
-        executorService.scheduleAtFixedRate(new Monitor(records), 0, 10, TimeUnit.SECONDS);
+        executorService.scheduleAtFixedRate(new Monitor(records), 0, 1, TimeUnit.MINUTES);
     }
 
     /**
@@ -54,7 +54,6 @@ public class Recorder implements Runnable {
      * Listen user input from the console
      * */
     public void listenUserInput() {
-        System.out.println("Please enter your payment below (e.g. HKD 300): ");
         String[] strs = {};
         String line = null;
         try {
